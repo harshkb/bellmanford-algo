@@ -41,11 +41,6 @@ void relaxedge(edges edg[],int i)                 // function to change distance
 
 int main()
 {
-    int testcase;
-    cout<<"number of testcases"<<endl;                 // take input number of testcases
-    cin>>testcase;
-    while(testcase--)
-    {
         cout<<"enter the number of edges and the number of the vertexes "<<endl;         // enter the number of edges as edge number
         int edgenumber;                                                                   // enter the number of vertexes as vertexnumber
         cin>>edgenumber;
@@ -111,7 +106,7 @@ int main()
 
         cout<<"Running Time Taken :: "<<(double)((double)clock()-(double)tstart)/CLOCKS_PER_SEC<<endl;     // running time taken
     }
-}
+
 
 
 
