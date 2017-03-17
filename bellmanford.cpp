@@ -20,9 +20,9 @@ void input(edges edg[],int i,vertex ver[])           // function for taking inpu
 {
     int ini,en,wei;                                // ini=initial number of vertex of the edge
      cin>>ini;
-     edg[i].init=&ver[ini];
+     edg[i].init=&ver[ini-1];
     cin>>en;                                        // en= ending number of vertex of the edge
-     edg[i].last=&ver[en];
+     edg[i].last=&ver[en-1];
     cin>>wei;                                        // wei = weight of the edge
      edg[i].weight=wei;
 }
@@ -44,9 +44,9 @@ int main()
         cout<<"enter the number of vertexes and the number of the edges "<<endl;         // enter the number of edges as edge number
          int vertexnumber;                                                              // enter the number of vertexes as vertexnumber
         cin>>vertexnumber;
-        int edgenumber;                                                                  
+        int edgenumber;
         cin>>edgenumber;
-       
+
 
         edges *edg=new edges[edgenumber];             // create dynamic array of edges
         vertex *ver=new vertex[vertexnumber];         // cerate dynamic array of vertexes
@@ -69,7 +69,7 @@ int main()
         int source;
         cout<<"enter the source vertex"<<endl;              // input the source from which vertex we have to find shortest path
         cin>>source;
-        ver[source].distance=0;
+        ver[source-1].distance=0;
         clock_t tstart = clock();                      // set the distance of that source vertex as zero
         while(i<vertexnumber-1)                       // call the method relaxedge for every edge for vertexnumber-1 times
         {
@@ -100,12 +100,12 @@ int main()
             while(i<vertexnumber)                      // show the value of output for shortest path to each vertex by the value of distance store in each vertex
             {
                 if(i!=source)
-                cout<<"shortest path from "<<source<<" to "<<i<<" :: "<<ver[i].distance<<endl;
+                cout<<"shortest path from "<<source<<" to "<<i+1<<" :: "<<ver[i].distance<<endl;
                 i++;
             }
         }
 
-        cout<<"Running Time Taken :: "<<(double)((double)clock()-(double)tstart)/CLOCKS_PER_SEC<<endl;     // running time taken
+        cout<<"Running Time Taken :: "<<(double)((double)((double)(clock())-(double)(tstart))/CLOCKS_PER_SEC)<<endl;     // running time taken
     }
 
 
