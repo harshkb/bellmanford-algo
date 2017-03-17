@@ -109,7 +109,7 @@ int main()
             }
         }
 
-        cout<<"Running Time Taken :: "<<(double)(clock()-tstart)/CLOCKS_PER_SEC<<endl;     // running time taken
+        cout<<"Running Time Taken :: "<<(double)((double)clock()-(double)tstart)/CLOCKS_PER_SEC<<endl;     // running time taken
     }
 }
 
