@@ -41,11 +41,12 @@ void relaxedge(edges edg[],int i)                 // function to change distance
 
 int main()
 {
-        cout<<"enter the number of edges and the number of the vertexes "<<endl;         // enter the number of edges as edge number
-        int edgenumber;                                                                   // enter the number of vertexes as vertexnumber
-        cin>>edgenumber;
-        int vertexnumber;
+        cout<<"enter the number of vertexes and the number of the edges "<<endl;         // enter the number of edges as edge number
+         int vertexnumber;                                                              // enter the number of vertexes as vertexnumber
         cin>>vertexnumber;
+        int edgenumber;                                                                  
+        cin>>edgenumber;
+       
 
         edges *edg=new edges[edgenumber];             // create dynamic array of edges
         vertex *ver=new vertex[vertexnumber];         // cerate dynamic array of vertexes
